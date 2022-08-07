@@ -38,14 +38,15 @@ app.post('/callback', line.middleware(config), (req, res) => {
       return Promise.resolve(null);
     }
   
+
     //logic process
-    
+     
 
     
 
     // create a echoing text message
     // const echo = { type: 'text', text: event.message.text };
-    const echo = { type: 'text', text: event.toString() };
+    const echo = { type: 'text', text: event.toString()+"ทดสอบ" };
   
     // use reply API
     return client.replyMessage(event.replyToken, echo);
